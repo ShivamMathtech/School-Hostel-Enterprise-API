@@ -1,6 +1,7 @@
 # School Hostel Enterprise API
 
 A production-oriented **FastAPI backend for school academics and residential hostel operations**. The project is implemented as a modular monolith so it can be deployed easily today and separated into services later when traffic or organizational boundaries require it.
+![image](image.png)
 
 ## Core capabilities
 
@@ -117,27 +118,27 @@ docker compose exec api python -m scripts.seed
 
 All seeded accounts use `Password@123`.
 
-| Role | Email |
-|---|---|
-| Administrator | `admin@school.local` |
-| Warden | `warden@school.local` |
-| Accountant | `accounts@school.local` |
-| Student | `student@school.local` |
+| Role          | Email                   |
+| ------------- | ----------------------- |
+| Administrator | `admin@school.local`    |
+| Warden        | `warden@school.local`   |
+| Accountant    | `accounts@school.local` |
+| Student       | `student@school.local`  |
 
 ## Major API groups
 
-| Domain | Prefix | Examples |
-|---|---|---|
-| Authentication | `/api/v1/auth` | Login, refresh token, current profile |
-| Users and roles | `/api/v1/users` | Create user, list users, activation |
-| Academics | `/api/v1/academics` | Grade/section management |
-| Students | `/api/v1/students` | Admission, search, profile update |
-| Attendance | `/api/v1/attendance` | Bulk mark and filter records |
-| Fees | `/api/v1/fees` | Invoices, payments, collection summary |
-| Hostel | `/api/v1/hostel` | Buildings, rooms, beds, allocations, occupancy |
-| Mess | `/api/v1/mess` | Plans and subscriptions |
-| Operations | `/api/v1/operations` | Visitors, leave, complaints |
-| Administration | `/api/v1/admin` | Management dashboard |
+| Domain          | Prefix               | Examples                                       |
+| --------------- | -------------------- | ---------------------------------------------- |
+| Authentication  | `/api/v1/auth`       | Login, refresh token, current profile          |
+| Users and roles | `/api/v1/users`      | Create user, list users, activation            |
+| Academics       | `/api/v1/academics`  | Grade/section management                       |
+| Students        | `/api/v1/students`   | Admission, search, profile update              |
+| Attendance      | `/api/v1/attendance` | Bulk mark and filter records                   |
+| Fees            | `/api/v1/fees`       | Invoices, payments, collection summary         |
+| Hostel          | `/api/v1/hostel`     | Buildings, rooms, beds, allocations, occupancy |
+| Mess            | `/api/v1/mess`       | Plans and subscriptions                        |
+| Operations      | `/api/v1/operations` | Visitors, leave, complaints                    |
+| Administration  | `/api/v1/admin`      | Management dashboard                           |
 
 The generated OpenAPI contract contains **44 operations across 32 paths**.
 
